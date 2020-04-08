@@ -168,8 +168,8 @@ class Application(Tk):
         self.hauteurEcran = self.winfo_height()
         hauteurDisponible = self.hauteurEcran - self.paletteCommandes.winfo_height()
         if self.afficherGraphique:
-            self.canvas.config(width=self.largeurEcran * 0.6, height=hauteurDisponible * 1)
-            self.graphique.config(width=self.largeurEcran * 0.4, height=hauteurDisponible * 1)
+            self.canvas.config(width=int(self.largeurEcran * 0.6), height=hauteurDisponible * 1)
+            self.graphique.config(width=int(self.largeurEcran * 0.4), height=hauteurDisponible * 1)
         else:
             self.canvas.config(width=self.largeurEcran * 1, height=hauteurDisponible * 1)
             self.graphique.config(width=0, height=0)
